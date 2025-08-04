@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 500;
+}
+
+#imagePreview {
+  position: absolute;
+  top: 182px;
+  left: 10px;
+  width: 40px;
+  height: 45px;
+  display: none;
+  border: 1px solid black;
+  margin-top: 10px;
+}
+
+.form{
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
+.form form input, select{
+  width: 80px;
+  outline: none;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  border: 1px solid #777;
+}
+
+.apr{
+  width: 100%;
+  background-image: url(letter.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: contain;
+}
+
+.apr p{
+  margin-bottom: 8px;
+}
+
+.apr .p1{
+  padding-top: 110px;
+  margin-left: 10px;
+}
+
+.apr .p2{
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.apr .p3{
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.apr #date{
+  position: absolute;
+  padding-top: 90px;
+  margin-left: 247px;
+}
+
+
+    #loader {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: white;
+    }
+
+    .spinner {
+      width: 80px;
+      height: 80px;
+      border: 8px solid #e0e0e0;
+      border-top: 8px solid #6a0dad;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .loading-text {
+      font-size: 18px;
+      color: #333;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    #content {
+      display: none;
+    }

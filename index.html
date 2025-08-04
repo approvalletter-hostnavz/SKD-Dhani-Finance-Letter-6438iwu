@@ -1,0 +1,129 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Dhani Approval Letter</title>
+</head>
+<body>
+  
+  <div id="loader">
+    <div class="spinner"></div>
+    <div class="loading-text">Loading Page...</div>
+  </div>
+  
+  <div id="content">
+  <div class="form">
+    <form>
+      <label for="name_input">Name</label>
+      <input type="text" name="name" id="name_input">
+    
+      <label>Loan</label>
+      <input type="text" name="loan" id="loan_input">
+    
+      <label>EMI</label>
+      <input type="text" name="emi" id="emi_input"><br>
+
+      <label>Years</label>
+      <input type="number" id="years_input" style="width: 40px;">
+    
+      <label>Fees</label>
+      <input type="text" id="charge_input" style="width: 50px;">&nbsp;
+      
+      <label>Loan Type</label>
+      <select id="loantype_input" style="outline: none; width: 70px;">
+        <option>Personal</option>
+        <option>Business</option>
+        <option>Home</option>
+        <option>Education</option>
+        <option>Car</option>
+      </select> &nbsp; 
+      
+      <!--
+      <input style="width: 35px; padding: 1px 3px;" type="reset">-->
+      
+      <!--Photo Upload-->
+      <input type="file" style="display: none;" id="imageInput" accept="image/*" />
+      <label for="imageInput" style="border: 1px solid #777; padding: 1px 8px; border-radius: 3px; background: #eee;">Image</label> &nbsp; 
+      
+      <!--Customer Bank Account-->
+      <label for="mySelect">Customer Account</label>
+      <select id="mySelect" style="width: 40px;">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+      </select><br>
+    
+      <!--Customer Account Input-->
+      <div id="custAcc" style="position: relative; left: -100%;">
+      <label for="acc_input">A/c No.</label>
+      <input type="text" name="acc" id="acc_input">
+      
+      
+      <label for="ifsc_input">IFSC</label>
+      <input type="text" name="ifsc" id="ifsc_input">
+      
+      
+      <label for="bank_input">Bank</label>
+      <input type="text" name="bank" id="bank_input">
+      </div>
+
+  </form>
+  
+    <input style="padding: 2px 7px; border-radius: 5px; outline: none; font-size: 12px;" type="submit" onclick="showInput();"><br><br>
+  
+</div>
+  
+  <div class="apr">
+    
+    <div>
+      <img id="imagePreview" />
+    </div>
+    
+    <span id="date">Date:- <span id="dateDisplay" contenteditable></span></span>
+  
+    <!--1-->
+    <p class="p1">Name: <span id='name'>Label</span><br>
+    Application No: REF/LOAN/#73196<br>
+    Loan Amount: <span id='loan'>Label</span>/-<br>
+    Subject: Approval for The <span id="loantype">Label</span> Loan</p>
+  
+    <!--2-->
+    <p class="p2">Dear <span id='Cname'>Label</span>,</p>
+  
+    <!--3-->
+    <p class="p3">&nbsp;&nbsp; &nbsp; We are sending you this letter to confirm your loan has been approved by "DHANI FINANCE LTD" for Monthly EMI <span id='emi'>Label</span> for <span id='years'>Label</span> years at <span contenteditable>2</span>% reducing rate of interest through funding scheme.</p>
+  
+    <!--4-->
+    <p class="p3">&nbsp;&nbsp; &nbsp; When you submit your amount for processing charge Rs. <span id='charge'>Label</span> then it's company responsibility to handover your loan Amount Rs. <span id='Cloan'>Label</span> and team will visit to your place shortly.</p>
+  
+    <!--5-->
+    <p class="p2">Please continue your loan process without any hesitation.<br>
+    Loan processing charge:- <span id='Ccharge'>Label</span></p>
+  
+    <!--6-->
+    <p id="custAc" style="position: absolute; padding-left: 45%; display: none;">Customer Credit Account:-<br>
+    Name:- <span id="Ccname" contenteditable>Label</span><br>
+    A/C:- <span id="acc">Label</span><br>
+    IFSC:- <span id="ifsc">Label</span><br>
+    Bank:- <span id="bank">Label</span></p>
+    
+    <p class="p2">Payment this account:-<br>
+    Name:- Dhani Finance Ltd<br>
+    A/C:- XXXX2031985<br>
+    IFSC:- SBIN0000454<br>
+    Bank:- State Bank Of India</p>
+    
+  
+    <!--7-->
+    <p class="p3">Note:- Cash deposit not accepted by company (Online transaction needed for IMPS/NEFT/RTGS/MOBILE BANKING your Bank Account/ Transition Verification.)</p><br><br><br><br><br><br><br>
+  
+  </div><br><br><br><br><br><br><br>
+  </div>
+  
+  <marquee>This Page will be End on 2025-09-01 at 16:51.</marquee>
+  
+  
+  <script src="main.js"></script>
+</body>
+</html>
