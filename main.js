@@ -103,7 +103,7 @@ const timeApiUrl = "https://script.googleusercontent.com/macros/echo?user_conten
 
 let validUntil = null;
 let intervalId;
-const expiryId = "MRR";
+const expiryId = "SKD";
 
 async function fetchWithTimeout(resource, options = {}) {
   const { timeout = 8000 } = options;
