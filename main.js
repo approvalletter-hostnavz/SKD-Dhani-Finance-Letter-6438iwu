@@ -96,10 +96,8 @@ function showInput() {
 
 }
 
-
-  
 const expiryApiUrl = "https://sheetbase.co/api/host-navz/1n6tOovDeIUsXttSJu0mM2tEeHNF0Adusgi1Jspayh-w/sheet1/";
-const timeApiUrl = "https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLimUoOBgdUqJAVJV_fLnRY05BYZzEs6oK065zafGOBJ64mmwRb9X0wpfZvX7dBXHx16BfrjzEgSHJlkJdeZpfBFzXfLyVVnCQfWyHchgPhU9KzF7aN2Ixlta7F8DbZtC5Ft4Zhu8q336-3hRGil0GoJBowqSO0WHudlqj0F70jFQXdNJvYp0iUPzZ11f92UeL8JmVEfNeKUJdn4BpQb9CbYX1Umpz2O4BM3UJHSR1X-tkPx-xJ3-3UILYrGR0BLnEKORS4-T5Xj95k6ugF6OP3m25LejA&lib=MwxUjRcLr2qLlnVOLh12wSNkqcO1Ikdrk";
+const timeApiUrl = "https://www.timeapi.io/api/Time/current/zone?timeZone=Asia/Kolkata";
 
 let validUntil = null;
 let intervalId;
@@ -170,9 +168,9 @@ async function checkTimeAndUpdate() {
     const response = await fetchWithTimeout(timeApiUrl, { cache: "no-store", timeout: 8000 });
     const data = await response.json();
 
-    if (data.status !== "ok" || !data.fulldate) throw new Error("Invalid server response");
+    if (!data.dateTime) throw new Error("Invalid server response");
 
-    const serverTime = new Date(data.fulldate);
+    const serverTime = new Date(data.dateTime);
     if (isNaN(serverTime)) throw new Error("Invalid server date");
 
     if (serverTime <= validUntil) {
@@ -215,3 +213,4 @@ window.addEventListener('offline', () => {
   document.body.innerHTML = "";
   location.reload();
 });
+                  
