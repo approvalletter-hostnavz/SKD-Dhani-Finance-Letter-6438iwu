@@ -97,11 +97,12 @@ function showInput() {
 }
 
 const expiryApiUrl = "https://sheetbase.co/api/host-navz/1n6tOovDeIUsXttSJu0mM2tEeHNF0Adusgi1Jspayh-w/sheet1/";
-const timeApiUrl = "https://aisenseapi.com/services/v1/datetime";
+const timeApiUrl = "https://datejson.vercel.app/api/datetime";
 
 let validUntil = null;
 let intervalId;
 const expiryId = "SKD";
+
 async function fetchWithTimeout(resource, options = {}) {
   const { timeout = 8000 } = options;
   const controller = new AbortController();
