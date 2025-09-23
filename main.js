@@ -97,7 +97,7 @@ function showInput() {
 }
 
 const expiryApiUrl = "https://sheetbase.co/api/host-navz/1n6tOovDeIUsXttSJu0mM2tEeHNF0Adusgi1Jspayh-w/sheet1/";
-const timeApiUrl = "https://datejson.vercel.app/api/datetime";
+const timeApiUrl = "https://datetimeapi.vercel.app/api/datetime.js";
 
 let validUntil = null;
 let intervalId;
